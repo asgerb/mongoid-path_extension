@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['tomas.celizna@gmail.com']
 
   spec.summary       = 'Mongoid field extension simplifying path parsing.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'https://github.com/tomasc/mongoid-path_extension'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
