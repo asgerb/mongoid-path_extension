@@ -22,7 +22,23 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
+class MyDoc
+  include Mongoid::Document
+  field :path, type: Mongoid::PathExtension
+end
 
+my_doc = MyDoc.new(path: 'LevelOne/LevelTwo/LevelThree')
+
+my_doc.path # => 'LevelOne/LevelTwo/LevelThree'
+my_doc.path.components # => %w(LevelOne LevelTwo LevelThree)
+my_doc.path.absolute # => '/LevelOne/LevelTwo/LevelThree'
+my_doc.path.root # => 'LevelOne'
+my_doc.path.permalink # => 'LevelThree'
+my_doc.path.parent_path # => 'LevelOne/LevelTwo'
+my_doc.path.parent_permalink # => 'LevelTwo'
+my_doc.path.has_parent? # => true
+```
 
 ## Development
 
@@ -32,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mongoid-path_extension.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tomasc/mongoid-path_extension.
 
 
 ## License
