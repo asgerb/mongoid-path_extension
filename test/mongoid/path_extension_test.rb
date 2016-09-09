@@ -5,8 +5,6 @@ class PathExtensionTest
   field :path, type: Mongoid::PathExtension
 end
 
-# ---------------------------------------------------------------------
-
 describe Mongoid::PathExtension do
   let(:path) { 'LevelOne/LevelTwo/LevelThree' }
   subject { PathExtensionTest.new(path: path) }

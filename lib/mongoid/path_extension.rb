@@ -7,8 +7,6 @@ module Mongoid
       @str = str.to_s
     end
 
-    # ---------------------------------------------------------------------
-
     def components
       return [] unless @str.present?
       @str.split('/')
@@ -26,8 +24,6 @@ module Mongoid
       ['/', @str].join
     end
 
-    # ---------------------------------------------------------------------
-
     def has_parent?
       components.length > 1
     end
@@ -41,8 +37,6 @@ module Mongoid
       return unless has_parent?
       components[-2]
     end
-
-    # =====================================================================
 
     class << self
       def demongoize(value)
