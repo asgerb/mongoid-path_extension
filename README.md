@@ -9,7 +9,7 @@ Mongoid field extension simplifying path parsing.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mongoid/path_extension'
+gem 'mongoid-path_extension'
 ```
 
 And then execute:
