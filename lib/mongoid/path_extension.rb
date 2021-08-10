@@ -28,6 +28,15 @@ module Mongoid
       components.length > 1
     end
 
+    def ancestor_paths
+      return unless has_parent?
+      res = []
+      components[0..-2].each_with_index do |component, index|
+        res << components[0..index].join('/')
+      end
+      res
+    end
+
     def parent_path
       return unless has_parent?
       components[0..-2].join('/')

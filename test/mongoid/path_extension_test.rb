@@ -37,6 +37,10 @@ describe Mongoid::PathExtension do
     subject.path.parent_permalink.must_equal 'LevelTwo'
   end
 
+  it '#ancestor_paths' do
+    subject.path.ancestor_paths.must_equal %w[LevelOne LevelOne/LevelTwo]
+  end
+
   it '#has_parent?' do
     Mongoid::PathExtension.new('LevelOne/LevelTwo').has_parent?.must_equal true
     Mongoid::PathExtension.new('LevelOne').has_parent?.must_equal false
