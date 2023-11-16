@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Next
+
+* Mongoid 8 compatibility
+
 ## 0.1.3
 
 * Adds `#ancestor_paths`, a simple getter which returns an array of the ancestor paths. Also cleans up the test suite, removing the deprecation warnings. (@asgerb)
